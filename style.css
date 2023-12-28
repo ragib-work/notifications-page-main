@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-size: 1.6rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* img{
+    width: 100%;
+} */
+
+.container{
+    max-width: 960px;
+    width: 100%;
+    background:hsl(0, 0%, 100%);
+    color: #333;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: hsl(224, 21%, 14%) ;
+}
+
+header p{
+    color: hsl(219, 12%, 42%);
+   
+}
+
+header span{
+    background: hsl(219, 85%, 26%);
+    color: #fff;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+}
+
+.time{
+    color: hsl(219, 14%, 63%);
+    
+}
+
+.user-name{
+    font-weight: 600;
+    color:hsl(224, 21%, 14%) ;
+}
+
+.tournament{
+    font-weight: 500;
+    color: hsl(219, 12%, 42%);
+}
+
+.chess-club{
+    color: hsl(219, 85%, 26%);
+}
+
+
+
+.users-notification{
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background:hsl(210, 60%, 98%);
+    border-radius: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.users-notification p{
+    color: hsl(219, 14%, 63%);
+}
+
+ 
+
+.users-notification img{
+    width: 4.5rem;
+}
+
+.notification-content{
+    display: none;
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.users-notification.active{
+
+    background: #fff;
+    .notification-content{
+    display: block;
+     }
+     .dot{
+        display: none;
+     }
+}
+
+.users-notification.seen{
+    background: #fff;
+    .dot{
+        display: none;
+    }
+    .notification-content{
+        display: none;
+    }
+}
+
+
+
+.dot{
+    display: inline-block;
+   height: 0.8rem;
+   width: 0.8rem;
+   margin-left: 0.5rem;
+   border-radius: 100%;
+   background:hsl(1, 90%, 64%); 
+}
+
+@media(min-width:768px){
+    .container{
+        width: 60%;
+        margin: 5rem auto;
+        padding: 3rem;
+        border-radius: 2rem;
+    }
+
+    body{
+        background: rgb(71, 59, 80);
+        align-items: center;
+    }
+}
